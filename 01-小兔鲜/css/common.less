@@ -1,0 +1,285 @@
+body {
+    background-color: #f5f5f5;
+}
+.w {
+    width: 1240px;
+    margin: 0 auto;
+    // background-color: aqua;
+}
+// 头部
+header {
+    width: 100%;
+    height: 53px;
+    background-color: #333;
+    // color: #dcdcdc;
+    // color: #fff;
+    font-size: 14px;
+    line-height: 53px;
+    ul {
+        // position: relative;
+        float: right;
+        li {
+            box-sizing: border-box;
+            // color: #dcdcdc;
+            float: left;     
+            position: relative;  
+            &:nth-child(2n) {
+                    width: 1px;
+                    height: 14px;
+                    margin:  20px;
+                    background-color: #666;                 
+                }
+                &:last-child {
+                    padding-left: 10px;
+                }
+                &:last-child::before {
+                    content: '';
+                    position: absolute;
+                    top: 18px;
+                    left: -8px;
+                    width: 11px;
+                    height: 16px;
+                    background: url(../images/shouji图像.png) no-repeat;
+                }
+            }
+        }
+}
+//导航
+nav {
+    position: relative;
+    height: 130px;
+    background-color: #fff;
+    color: #dcdcdc;
+    .logo {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            width: 207px;
+            height: 70px;
+            
+        }    
+    .search {
+        position: absolute;
+        top: 49px;
+        left: 264px;
+        width: 968px;
+        height: 36px;
+        margin-left: 30px;
+        //  background-color: pink;
+        color: #333;
+        // line-height: 36px;
+        // font-size: 16px;
+        
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 711px;
+            height: 16px;
+            a {
+                float: left;
+                margin: 1px 44px 10px 0;
+                color: #333;
+                font-size: 16px;
+                &:hover {
+                    // text-decoration: underline;
+                    color: #27ba9b;
+                    border-bottom: 1px solid #27ba9b;
+                }
+                
+            }
+        }
+        .right {
+            position: absolute;
+            top: 0;
+            right: 66px;
+            width: 180px;
+            height: 35px;
+            // background-color: #27ba9b;
+            border-bottom: 2px solid #e7e7e7;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: -3px;
+                width: 18px;
+                height: 18px;
+                background: url(../images/sousuo图像.png) no-repeat;
+            }
+            input {
+                margin-left: 26px;
+                height: 100%;
+            }
+
+
+        }
+        .car {
+            position: absolute;
+            top: 6px;
+            right: 30px;
+            width: 23px;
+            height: 23px;
+        }
+
+    }
+  
+}
+.help {
+    width: 100%;
+    height: 303px;
+    background-color: #fff;
+    margin-top: 38px;
+    // line-height: 512px;
+    // text-align: center;
+    .box{
+        // margin-top: 80px;
+         padding: 83px 62px 60px;
+         .show{
+        position: relative;
+        float: left;
+        width: 193px;
+        height: 143px;
+        margin-right: 70px;
+        //  background-color:pink;
+        //  overflow: hidden;
+        text-align: center;
+        &:nth-child(3) {
+            width: 241px;
+            height: 156px;
+            .box3 {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 116px;
+                height: 116px;
+                border: 1px solid #f2f2f2;
+                background: url(../images/图层894图像.png) no-repeat;
+                background-position: center center;
+            }
+            .font {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 92px;
+                height: 110px;
+                text-align: left;
+                p {
+                color: #999;
+                font-size: 14px;
+                margin-top: 8px;
+            }
+            button {     
+                margin: 6px 0px;        
+	           width: 103px;
+	          height: 32px;
+	          background-color: #27ba9b;
+              color: #fff;
+              font-size: 14px;
+
+               }
+            
+            }
+            
+        }
+        &:nth-child(2) {
+            .box1 {
+                background: url(../images/-e-weixin图像.png) no-repeat;
+                background-position: center center;
+            }
+            .box2 {
+                background: url(../images/-e-weibo图像.png) no-repeat;
+                background-position: center center;
+            }
+        }
+        &:last-child{       
+        //     float: right;
+        //   margin-right: 0;
+          width: 160px;
+          height: 122px;
+          .font {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            // line-height: 100px;
+            padding-top: 58px;
+            .big {
+                color: #666;
+                font-size: 22px;
+                margin-bottom: 10px;;
+            }
+            .gray {
+                color: #999;
+                font-size: 15px;
+            }
+          }
+        }
+        h4 {
+            font-size: 16px;
+            color: #999;
+            font-weight: normal;
+        }
+        .box1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 93px;
+            height: 92px;
+            // line-height: 92px;
+            // text-align: center;
+            border: 1px solid #f2f2f2;
+            background: url(../images/-e-kefu图像.png) no-repeat;
+            background-position: center center;
+        }
+        .box2 {
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            width: 93px;
+            height: 92px;
+            border: 1px solid #f2f2f2;
+            background: url(../images/-e-changjianwenti图像.png) no-repeat;
+            background-position: center center;
+        }
+    }
+
+    }
+   
+}
+footer {
+    height: 342px;
+    width: 100%;
+    background-color: #333;
+    .first {
+        height: 171px;
+        width: 100%;
+        border-bottom: 3px solid #434343;
+        a {
+            float: left;
+            margin: 56px 110px 56px;
+        }
+    }
+    .bottom {
+        width: 537px;
+        height: 40px;
+        margin: 36px auto;
+        line-height: 48px;
+        text-align: center;
+        color: #999;
+        a {
+            color: #999;
+            color: 14px;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
