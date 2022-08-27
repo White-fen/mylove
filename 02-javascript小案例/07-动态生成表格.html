@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-spacing: 0;
+        }
+
+        /* table th {} */
+
+        tr {
+            /* width: 100px; */
+            height: 40px;
+
+        }
+
+        td,
+        th {
+
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>科目</th>
+                    <th>成绩</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </form>
+    <script>
+        var obj = [{
+                name: '王一博',
+                subject: '理科',
+                score: 97
+            },
+            {
+                name: '肖战',
+                subject: '艺术',
+                score: 91
+            },
+            {
+                name: '琑儿',
+                subject: '全能',
+                score: 95
+            }, {
+                name: '玐玐',
+                subject: '不知道',
+                score: 100
+            }
+        ]
+        var thead = document.querySelector('thead');
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < obj.length; i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            for (var key in obj[i]) {
+                var td = document.createElement('td');
+                td.innerHTML = obj[i][key];
+                tr.appendChild(td);
+            }
+        }
+        var tr = tbody.querySelectorAll('tr');
+        for (var i = 0; i < tr.length; i++) {
+            var td = document.createElement('td');
+            td.innerHTML = '<a href="javascript:;">删除</a>';
+            tr[i].appendChild(td);
+            tr[i].children[3].children[0].addEventListener('click', function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            })
+        }
+    </script>
+</body>
+
+
+</html>

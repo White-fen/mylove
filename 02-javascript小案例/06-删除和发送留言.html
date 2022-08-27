@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -14,6 +17,27 @@
     <ul>
 
     </ul>
+    <script>
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        btn.addEventListener('click', function () {
+            if (text.value == '') {
+                return false;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value + '<a href="javascript:;">删除</a>';
+                ul.insertBefore(li, ul.children[0]);
+                li.children[0].addEventListener('click', function () {
+                    ul.removeChild(this.parentNode);
+                })
+
+            }
+
+
+        })
+        // for(var i = 0; i <li.length)
+    </script>
 
 </body>
 
