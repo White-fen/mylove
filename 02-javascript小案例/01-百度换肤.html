@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url(../02-javascript小案例/00-imgs/1.jpg) no-repeat;
+            /* background-position: center center; */
+            /* height: 100%; */
+            background-position: center center;
+        }
+
+
+        .baidu {
+            display: block;
+            width: 1030px;
+            height: 200px;
+            margin: 100px auto;
+        }
+
+        .baidu li {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 0 2px;
+            list-style: none;
+        }
+
+        .baidu li img {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="../02-javascript小案例/00-imgs/1.jpg" alt=""></li>
+        <li><img src="../02-javascript小案例/00-imgs/2.png" alt=""></li>
+        <li><img src="../02-javascript小案例/00-imgs/3.jpg" alt=""></li>
+        <li><img src="../02-javascript小案例/00-imgs/4.jpg" alt=""></li>
+        <li><img src="../02-javascript小案例/00-imgs/5.jpg" alt=""></li>
+    </ul>
+    <script>
+        var ul = document.querySelector('.baidu');
+        var imgs = ul.querySelectorAll('img');
+        var body = document.body;
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].addEventListener('click', function () {
+                body.style.backgroundImage = 'url(' + this.src + ')';
+            })
+        }
+        // ul.addEventListener('mouseenter', function () {
+        //     ul.style.display = 'block';
+        // })
+        // ul.addEventListener('mouseleave', function () {
+        //     ul.style.display = 'none';
+        // })
+    </script>
+</body>
+
+</html>
